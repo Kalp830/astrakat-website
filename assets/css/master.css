@@ -28898,7 +28898,7 @@ main {
 }
 
 .testimonial__img-4 {
-    margin-bottom: 42px;
+    margin-bottom: 16px;
     border-radius: 100px;
     width: 85px;
     height: auto;
@@ -35631,6 +35631,10 @@ body {
 
 .dark.dir-rtl .portfolio__about .brand-title-wrap {
     border-left: 1px solid var(--secondary);
+}
+.start-rating{
+    color: rgb(231, 200, 21);
+    font-size: 18px;
 }
 
 /*# sourceMappingURL=master.css.map */
