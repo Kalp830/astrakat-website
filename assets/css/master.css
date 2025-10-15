@@ -8159,7 +8159,7 @@ img {
 
 .hero__title {
     font-weight: 500;
-    font-size: 126px;
+    font-size: 110px;
     line-height: 1;
     color: var(--gray-10);
     margin-top: 55px;
@@ -8872,7 +8872,7 @@ img {
 
 .roll__slide h2 {
     font-weight: 400;
-    font-size: 26px;
+    font-size: 21px;
     line-height: 1.1;
     text-transform: uppercase;
     color: var(--black);
