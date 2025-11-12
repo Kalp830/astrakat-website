@@ -101,8 +101,8 @@
                         <ul class="menu-anim">
                             <li><a href="#">About</a>
                                 <ul>
-                                    <li><a href="#team">Team</a></li>
-                                    <li><a href="#how-we-work">How We Work</a></li>
+                                    <li><a href="#team" onclick="document.getElementById('close_offcanvas').click()">Team</a></li>
+                                    <li><a href="#weWork" onclick="document.getElementById('close_offcanvas').click()">How We Work</a></li>
                                     <li><a href="career.html">Careers</a></li>
                                 </ul>
                             </li>
@@ -381,7 +381,7 @@
                 </section>
                 <!-- Counter area end -->
                 <!-- Workflow area start -->
-                <section class="dark workflow__area" id="how-we-work">
+                <section id="weWork" class="dark workflow__area" >
                     <div class="container g-0 line pt-140 pb-140">
                         <div class="line-3"></div>
                         <div class="row">
@@ -426,7 +426,7 @@
                 </section>
                 <!-- Workflow area end -->
                 <!-- Brand area start -->
-                <section class="dark aboutbrand__area" id="team">
+                <section id="team" class="dark aboutbrand__area" >
                     <div class="container g-0 line pt-140 pb-130">
                         <span class="line-3"></span>
                         <div class="row">
@@ -659,7 +659,31 @@
     <script src="assets/js/vanilla-tilt.js"></script>
     <script src="assets/js/jquery.meanmenu.min.js"></script>
     <script src="assets/js/main.js"></script>
-    
+    <script>
+    // Wait for the entire page to be fully loaded
+    window.addEventListener('load', (event) => {
+        // Check if there is a hash in the URL (e.g., #team)
+        if (window.location.hash) {
+            const theHash = window.location.hash;
+
+            // Use a small delay (e.g., 500ms)
+            // This gives ScrollSmoother time to initialize before we try to scroll
+            setTimeout(() => {
+                // Check if GSAP and ScrollToPlugin are loaded
+                if (gsap && gsap.plugins.scrollTo) {
+                    gsap.to(window, {
+                        duration: 1.5, // Animation duration in seconds
+                        scrollTo: {
+                            y: theHash, // The ID to scroll to
+                            autoKill: false
+                        },
+                        ease: "power2.inOut" // A nice easing effect
+                    });
+                }
+            }, 500); // 500ms delay, increase if it's still not working
+        }
+    });
+    </script>
 </body class="dir-rtl">
 <!-- Mirrored from wealcoder.com/dev/html/axtra/index-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jan 2023 07:39:15 GMT -->
 
