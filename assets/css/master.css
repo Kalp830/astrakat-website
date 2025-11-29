@@ -35631,4 +35631,22 @@ ul.listing-text li{
     line-height: 2.5;
     
 }
+
+.masonry {
+    column-count: 3;
+    column-gap: 20px;
+}
+
+.masonry img {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover zoom */
+.masonry img:hover {
+    transform: scale(1.05);
+}
 /*# sourceMappingURL=master.css.map */
